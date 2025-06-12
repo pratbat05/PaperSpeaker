@@ -1,10 +1,9 @@
 from paper_speaker import PaperSpeaker
 
 def main():
-    # Initialize the PaperSpeaker agent
     speaker = PaperSpeaker(language='en')
     
-    # Example 1: Convert a PDF file to audio
+    #PDF file to audio
     try:
         output_path = speaker.process_paper(
             input_path="example_paper.pdf",
@@ -14,7 +13,7 @@ def main():
     except Exception as e:
         print(f"Error processing PDF: {str(e)}")
     
-    # Example 2: Convert a research paper URL to audio
+    #URL to audio
     try:
         output_path = speaker.process_url(
             url="https://example.com/research-paper",
