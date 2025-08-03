@@ -3,7 +3,6 @@ from paper_speaker import PaperSpeaker
 def main():
     speaker = PaperSpeaker(language='en')
     
-    #PDF file to audio
     try:
         output_path = speaker.process_paper(
             input_path="example_paper.pdf",
@@ -13,7 +12,6 @@ def main():
     except Exception as e:
         print(f"Error processing PDF: {str(e)}")
     
-    #URL to audio
     try:
         output_path = speaker.process_url(
             url="https://example.com/research-paper",
